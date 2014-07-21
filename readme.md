@@ -2,8 +2,8 @@
 
 To run script:
 
-Assuming you have Ruby installed, navigate to `korean_flashcard` folder, and
- enter `ruby korean_flashcard.rb`
+Assuming you have Ruby installed, from command line, navigate to 
+`korean_flashcard` folder, and enter `ruby korean_flashcard.rb`
 
 
 See example:
