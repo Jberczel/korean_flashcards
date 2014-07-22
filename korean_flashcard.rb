@@ -11,8 +11,12 @@ class FlashCard
     puts '----------------'
     puts 'KOREAN FLASHCARD'
     puts '----------------'
-    ask_questions
-    print_results(dict)
+    print 'How many words would you like to review [1-100]: '
+    input = gets.chomp.to_i
+
+    sample = Hash[@dict.to_a.sample(input)]
+    ask_questions(sample)
+    print_results(sample)
   end
 
   # select korean-to-english or english-to-korean dictionary
@@ -39,30 +43,29 @@ class FlashCard
   end
 
   # loop through dictionary and prompt user for answers
-  def ask_questions
-    @dict.each_with_index do |(key, val), i|   
+  def ask_questions(dict)
+    dict.each_with_index do |(key, val), i|   
       print "Question #{i+1}: #{key} is "
       input = gets.chomp
-      check_answer(input, val, i)    
+      
+      if check_answer(input, val) 
+         puts "Correct! #{@correct} of #{i+1} correct.\n\n"
+      else
+        print "Sorry, the correct answer is #{val}." 
+        print " #{@correct} of #{i+1} correct.\n\n"
+      end
     end
   end
 
-  # check if user input matches correct translation
-  def check_answer(input, val, index)
-    if (input == val)
-      @correct += 1
-      puts "Correct! #{@correct} of #{index+1} correct.\n\n" 
-    else
-      print "Sorry, the correct answer is #{val}." 
-      print " #{@correct} of #{index+1} correct.\n\n"
-    end
+  def check_answer(input, val)
+     @correct += 1 if (input == val)   
   end
 
-  def print_results
+  def print_results(dict)
     puts "-------------------------------------"
     puts "Your final score: #{@correct} of #{dict.length}."
     puts "Below is a list of words in the quiz: "
-    @dict.each { |key, val| puts "#{key} --- #{val}" }
+    dict.each { |key, val| puts "#{key} --- #{val}" }
     puts "-------------------------------------\n\n"
   end
 

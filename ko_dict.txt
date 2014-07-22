@@ -26,37 +26,37 @@
 쉬운,easy
 나쁜,bad
 가까이에,near
-만나서 반가워요,Nice to meet you
-안녕,Hello
-좋은 아침이에요,Good morning
-안녕하세요,Good afternoon
-안녕하세요,Good evening
-안녕히 주무세요,Good night
-어떻게 지내세요,How are you
-고마워요.,Thank you
-아니요,No
-맛있어요,Delicious
-잘 가요,Goodbye
-네,Yes
-월요일,Monday
-화요일,Tuesday
-수요일,Wednesday
-목요일,Thursday
-금요일,Friday
-토요일,Saturday
-일요일,Sunday
-오월,May
-일월,January
-이월,February
-삼월,March
-사월,April
-유월,June
-칠월,July
-팔월,August
-구월,September
-시월,October
-십일월,November
-십이월,December
+만나서 반가워요,nice to meet you
+안녕,hello
+좋은 아침이에요,good morning
+안녕하세요,good afternoon
+안녕하세요,good evening
+안녕히 주무세요,good night
+어떻게 지내세요,how are you
+고마워요,thank you
+아니요,no
+맛있어요,delicious
+잘 가요,goodbye
+네,yes
+월요일,monday
+화요일,tuesday
+수요일,wednesday
+목요일,thursday
+금요일,friday
+토요일,saturday
+일요일,sunday
+오월,may
+일월,january
+이월,february
+삼월,march
+사월,april
+유월,june
+칠월,july
+팔월,august
+구월,september
+시월,october
+십일월,november
+십이월,december
 영,zero
 일,one
 이,two
