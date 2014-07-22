@@ -36,6 +36,7 @@
 고마워요,thank you
 아니요,no
 맛있어요,delicious
+저는 라고 합니다,i'm(name)
 잘 가요,goodbye
 네,yes
 월요일,monday

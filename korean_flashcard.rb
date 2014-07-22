@@ -31,7 +31,7 @@ class FlashCard
 
   # import words from text file (scraped from korean website: top 100 words)
   def import_dict(lang)
-    f = File.open("ko_dict.txt", 'r')
+    f = File.open("import_dict/ko_dict.txt", 'r')
     dict = {}
     while !f.eof?
        line = f.readline
