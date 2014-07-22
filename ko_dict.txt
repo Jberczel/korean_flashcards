@@ -1,0 +1,100 @@
+주,week
+년,year
+오늘,today
+내일,tomorrow
+어제,yesterday
+달력,calendar
+초,second
+시,hour
+분,minute
+정각,o'clock
+시계,clock
+할 수 있다,can
+사용하다,use
+하다,do
+가다,go
+오다,come
+웃다,laugh
+만들다,make
+보다,see
+멀리,far
+작은,small
+좋은,good
+아름다운,beautiful
+못생긴,ugly
+어려운,difficult
+쉬운,easy
+나쁜,bad
+가까이에,near
+만나서 반가워요,Nice to meet you
+안녕,Hello
+좋은 아침이에요,Good morning
+안녕하세요,Good afternoon
+안녕하세요,Good evening
+안녕히 주무세요,Good night
+어떻게 지내세요,How are you
+고마워요.,Thank you
+아니요,No
+맛있어요,Delicious
+잘 가요,Goodbye
+네,Yes
+월요일,Monday
+화요일,Tuesday
+수요일,Wednesday
+목요일,Thursday
+금요일,Friday
+토요일,Saturday
+일요일,Sunday
+오월,May
+일월,January
+이월,February
+삼월,March
+사월,April
+유월,June
+칠월,July
+팔월,August
+구월,September
+시월,October
+십일월,November
+십이월,December
+영,zero
+일,one
+이,two
+삼,three
+사,four
+오,five
+육,six
+칠,seven
+팔,eight
+구,nine
+십,ten
+커피,coffee
+맥주,beer
+차,tea
+포도주,wine
+물,water
+쇠고기,beef
+돼지고기,pork
+닭고기,chicken
+양고기,lamb
+생선,fish
+발,foot
+다리,leg
+머리,head
+팔,arm
+손,hand
+손가락,finger
+몸,body
+배,stomach
+등,back
+가슴,chest
+간호사,nurse
+직원,employee
+경찰관,police officer
+요리사,cook
+엔지니어,engineer
+의사,doctor
+매니저,manager
+선생님,teacher
+프로그래머,programmer
+판매원,salesman

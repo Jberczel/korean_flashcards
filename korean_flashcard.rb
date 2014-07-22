@@ -1,50 +1,51 @@
 class FlashCard
 
   def initialize
-    # TODO: load from file
-    @korean_dict = {
-      "사과" => "apple",
-      "맥주" => "beer",
-      "책" => "book",
-      "의자" => "chair",
-      "피아노" => "piano"
-    }
-    @english_dict = @korean_dict.invert
+    # prompts user to select type of dictionary
+    @dict = select_dict
     @correct = 0
   end
 
-
+  # starts the game
   def play
     puts '----------------'
     puts 'KOREAN FLASHCARD'
     puts '----------------'
-
-    dict = pick_dict
-    ask_questions(dict)
+    ask_questions
     print_results(dict)
   end
 
-
   # select korean-to-english or english-to-korean dictionary
-  def pick_dict
+  def select_dict
     user_input = -1
     until (user_input == 1 || user_input == 2)
         print "Korean to English [press 1] or English to Korean [press 2]: " 
         user_input = gets.chomp.to_i
     end
-    user_input == 1 ? @korean_dict : @english_dict
+    user_input == 1 ? import_dict('korean') : import_dict('english')
   end
 
+  # import words from text file (scraped from korean website: top 100 words)
+  def import_dict(lang)
+    f = File.open("ko_dict.txt", 'r')
+    dict = {}
+    while !f.eof?
+       line = f.readline
+       words = line.split(',')
+       words[1] = words[1].strip
+       lang == 'korean' ? dict[words[0]] = words[1] : dict[words[1]] = words[0]
+    end
+    dict
+  end
 
   # loop through dictionary and prompt user for answers
-  def ask_questions(dict)
-    dict.each_with_index do |(key, val), i|   
+  def ask_questions
+    @dict.each_with_index do |(key, val), i|   
       print "Question #{i+1}: #{key} is "
       input = gets.chomp
       check_answer(input, val, i)    
     end
   end
-
 
   # check if user input matches correct translation
   def check_answer(input, val, index)
@@ -57,12 +58,11 @@ class FlashCard
     end
   end
 
-
-  def print_results(dict)
+  def print_results
     puts "-------------------------------------"
     puts "Your final score: #{@correct} of #{dict.length}."
     puts "Below is a list of words in the quiz: "
-    dict.each { |key, val| puts "#{key} --- #{val}" }
+    @dict.each { |key, val| puts "#{key} --- #{val}" }
     puts "-------------------------------------\n\n"
   end
 
